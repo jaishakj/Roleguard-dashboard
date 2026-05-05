@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 1. Explicitly allow users collection for everyone during troubleshooting
+    match /users/{userId} {
+      allow read, write: if true;
+    }
+
+    // 2. Records collection
+    match /records/{recordId} {
+      allow read, write: if request.auth != null;
+    }
+
+    // 0. Global Safety Net (default deny for everything else)
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "RoleGuard Dashboard",
+  "description": "A high-security, role-based dashboard with integrated auth, RLS-style data privacy, and managed account lifecycle.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

@@ -1,6 +1,5 @@
-<div align="center">
+
    # Roleguard dashboard
-</div>
 
 
 
